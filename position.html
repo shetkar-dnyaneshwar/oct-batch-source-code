@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*#firstPara {
+            position: fixed;
+            top:10px;
+            left: 20px;
+        }*/
+        /*#secondPara.sticky.abcd {
+            position:sticky;
+            top:10px;
+            color:aquamarine;
+        }*/
+        #firstSection>p{
+            color: red;
+        }
+        #firstPara:hover{
+            color:blue;
+        }
+        #firstPara~p {
+            color:blue;
+        }
+        #firstSection p:last-child{
+            background-color: brown;
+        }
+        input#firstName:hover{
+            border-color: aqua;
+        }
+        input#firstName:invalid {
+            border-color: red;
+        }
+        input#firstName:valid {
+            border-color: greenyellow;
+        }
+        input#firstName:required {
+            background-color: blueviolet;
+        }
+        input#lastName:disabled {
+            background-color: black;
+        }
+        #firstPara::after{
+            display: inline-block;
+            content: "";
+            width: 10px;
+            height:20px;
+            background-color: blueviolet;
+        }
+        #firstPara::first-letter {
+            font-size: 50px;
+        }
+
+        #firstPara::first-line {
+            background-color:chartreuse;
+        }
+
+        input[disabled]{
+            border: 10px solid green;
+        }
+
+        input[name="lastName"]{
+            border-color: pink;
+        }
+
+        *{
+            box-sizing: border-box;
+        }
+        .container>div{
+            border: 3px solid black;
+            width: 32%;
+            float: left;
+            padding:10px;
+            border-radius: 4%;
+            text-align: center;
+        }
+        .container>div:hover{
+            background-color: aqua;
+        }
+        .container div:nth-child(1){
+            margin-right:10px;
+        }
+        .container div:nth-child(2){
+            margin-right:10px;
+        }
+        .container>div>img{
+            width:100%;
+            height: 50vh;
+        }
+        .clearfix{
+            clear: both;
+        }
+        .flex-container {
+            display:flex;
+            flex-direction: row;
+
+            /*flex-direction: row;
+            flex-wrap: wrap;*/
+
+           /* flex-flow: row wrap;
+            justify-content: space-around;
+            border: 1px solid black;
+            height: 300vh;
+            align-items:center;
+            align-content: space-evenly;*/
+        }
+        .flex-container>div {
+            border: 1px solid black;
+            padding:20px;
+            width:30%;
+            height:100vh;
+        }
+        .flex-container img {
+            width:100%;
+            height:25vh;
+        }
+    </style>
+
+    <style>
+        .form-container {
+            background-color: blueviolet;
+        }
+    </style>
+    <link rel="stylesheet" href="./css/mobile.css" media="screen and (max-width:414px) and (orientation: portrait)">
+</head>
+<body>
+
+    <!-- <section class="form-container">
+
+   
+        <form>
+            <div>
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" name="firstName" required />
+            </div>
+            <div>
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" name="lastName" disabled />
+            </div>
+            <button type="submit"> Save </button>
+        </form>
+
+    </section>
+
+    <section style="display:flex;
+    width:200px;height:200px; background-color: aqua; 
+    justify-content: center;
+    align-content: center;
+    flex-wrap: wrap;">
+        <div style="width:100px;height:100px; background-color:red">
+
+        </div>
+    </section>-->
+
+   <section>
+        <h1>Our Best Products </h1>
+        <p class="product-description">This is list of our products</p>
+        <div class="flex-container">
+            <div>
+                <img src="./images/toy1.jpg">
+                <h4>Toy 1</h4>
+                <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+                labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+                animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+                aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+                pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+                proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+                eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+                Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+                culpa duis.</p>
+                <button type="button">Add To Cart</button>
+            </div>
+            <div>
+                <img src="./images/toy2.jpg">
+                <h4>Toy 2</h4>
+                <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+                labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+                animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+                aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+                pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+                proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+                eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+                Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+                culpa duis.</p>
+                <button type="button">Add To Cart</button>
+            </div>
+
+            <div>
+                <img src="./images/toy3.jpg">
+                <h4>Toy 3</h4>
+                <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+                labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+                animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+                aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+                pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+                proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+                eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+                Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+                culpa duis.</p>
+                <button type="button">Add To Cart</button>
+            </div>
+            
+            
+
+            
+        </div>
+    </section>
+
+    <!--<section>
+        <h1>Our Best Products </h1>
+        <div class="container">
+            <div>
+                <img src="./images/toy1.jpg">
+                <h4>Toy 1</h4>
+                <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+                labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+                animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+                aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+                pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+                proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+                eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+                Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+                culpa duis.</p>
+                <button type="button">Add To Cart</button>
+            </div>
+            <div>
+                <img src="./images/toy2.jpg">
+                <h4>Toy 2</h4>
+                <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+                labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+                animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+                aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+                pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+                proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+                eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+                Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+                culpa duis.</p>
+                <button type="button">Add To Cart</button>
+            </div>
+
+            <div>
+                <img src="./images/toy3.jpg">
+                <h4>Toy 3</h4>
+                <p>Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+                labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+                animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+                aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+                pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+                proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+                eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+                Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+                culpa duis.</p>
+                <button type="button">Add To Cart</button>
+            </div>
+        </div>
+        <div class="clearfix">
+            Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+            labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+            animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+            aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+            pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+            commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+            proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+            eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+            Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+            culpa duis.
+        </div>
+    </section>
+
+    <section id="firstSection">
+        <p id="firstPara">Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+        labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+        animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+        aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+        pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+        commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+        proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+        eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+        Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+        culpa duis.</p>
+        <p id="secondPara" class="sticky abcd">Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+            labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+            animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+            aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+            pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+            commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+            proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+            eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+            Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+            culpa duis.</p>
+
+            <p id="fourthPara" class="sticky abcd">Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+                labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+                animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+                aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+                pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+                commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+                proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+                eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+                Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+                culpa duis.</p>
+    </section>
+
+    <section id="secondSection">
+        <p id="thirdPara" class="sticky">Lorem ipsum dolor sit amet, officia excepteur ex fugiat reprehenderit enim
+            labore culpa sint ad nisi Lorem pariatur mollit ex esse exercitation amet. Nisi
+            animcupidatat excepteur officia. Reprehenderit nostrud nostrud ipsum Lorem est
+            aliquip amet voluptate voluptate dolor minim nulla est proident. Nostrud officia
+            pariatur ut officia. Sit irure elit esse ea nulla sunt ex occaecat reprehenderit
+            commodo officia dolor Lorem duis laboris cupidatat officia voluptate. Culpa
+            proident adipisicing id nulla nisi laboris ex in Lorem sunt duis officia
+            eiusmod. Aliqua reprehenderit commodo ex non excepteur duis sunt velit enim.
+            Voluptate laboris sint cupidatat ullamco ut ea consectetur et est culpa et
+            culpa duis.</p>
+    </section>-->
+    
+</body>
+</html>
